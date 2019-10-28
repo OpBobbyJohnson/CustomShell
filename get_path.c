@@ -22,7 +22,6 @@ struct pathelement *get_path()
   path = malloc((strlen(p)+1)*sizeof(char));	/* use malloc(3) */
   strncpy(path, p, strlen(p));
   path[strlen(p)] = '\0';
-
   p = strtok(path, ":"); 	/* PATH is : delimited */
   do				/* loop through the PATH */
   {				/* to build a linked list of dirs */
